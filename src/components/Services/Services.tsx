@@ -1,48 +1,37 @@
-import React from 'react';
-import { ArrowRight, Activity, Brain, Bone, Heart } from 'lucide-react';
+import { ArrowRight, Activity, Bone, Heart } from 'lucide-react';
+import manualterapi1 from '../../assets/manualterapi1.jpg';
+import fiziktedavi1 from '../../assets/fiziktedavi1.jpg';
+import yoga1 from '../../assets/yoga1.jpg';
+import pilates1 from '../../assets/pilates1.jpg';
 
 const Services = () => {
   const services = [
     {
       icon: <Activity className="w-12 h-12" />,
       title: 'Manuel Terapi',
-      description: 'Eller ile yapılan özel tedavi teknikleri ile kas ve eklem problemlerinizin çözümü için etkili yaklaşımlar.',
-      image: 'https://images.pexels.com/photos/7659564/pexels-photo-7659564.jpeg?auto=compress&cs=tinysrgb&w=800',
+      description: 'Eller ile uygulanan manuel terapi teknikleriyle ağrı, hareket kısıtlılığı ve fonksiyon kayıplarına hedefe yönelik çözümler.',
+      image: manualterapi1,
       color: 'teal'
     },
     {
-      icon: <Bone className="w-12 h-12" />,
-      title: 'Bel Fıtığı Tedavisi',
-      description: 'Bel fıtığı problemleriniz için modern fizik tedavi yöntemleri ve manuel terapi uygulamaları.',
-      image: 'https://images.pexels.com/photos/6111610/pexels-photo-6111610.jpeg?auto=compress&cs=tinysrgb&w=800',
+      icon: <Activity className="w-12 h-12" />,
+      title: 'Fizik Tedavi Seansları',
+      description: 'Bireye özel değerlendirme ile egzersiz, elektroterapi ve manuel teknikleri içeren kapsamlı fizik tedavi seansları.',
+      image: fiziktedavi1,
       color: 'blue'
     },
     {
-      icon: <Brain className="w-12 h-12" />,
-      title: 'Boyun Fıtığı ve Tedavisi',
-      description: 'Boyun bölgesi fıtık problemleri için özel egzersiz programları ve manuel tedavi teknikleri.',
-      image: 'https://images.pexels.com/photos/7659710/pexels-photo-7659710.jpeg?auto=compress&cs=tinysrgb&w=800',
-      color: 'green'
-    },
-    {
-      icon: <Activity className="w-12 h-12" />,
-      title: 'Skolyoz Tedavisi',
-      description: 'Omurga eğrilikleri için özel egzersiz programları ve postür düzeltme teknikleri.',
-      image: 'https://images.pexels.com/photos/7659675/pexels-photo-7659675.jpeg?auto=compress&cs=tinysrgb&w=800',
+      icon: <Heart className="w-12 h-12" />,
+      title: 'Bireysel / Grup Yoga Dersi',
+      description: 'Nefes, mobilite ve farkındalık odaklı; bireysel veya küçük gruplarla güvenli yoga seansları.',
+      image: yoga1,
       color: 'purple'
     },
     {
-      icon: <Brain className="w-12 h-12" />,
-      title: 'Migren ve Baş Ağrısı Tedavisi',
-      description: 'Kronik baş ağrıları ve migren problemleri için manuel terapi ve özel egzersiz programları.',
-      image: 'https://images.pexels.com/photos/7659528/pexels-photo-7659528.jpeg?auto=compress&cs=tinysrgb&w=800',
-      color: 'red'
-    },
-    {
-      icon: <Heart className="w-12 h-12" />,
-      title: 'Postür Bozukluğu Tedavisi',
-      description: 'Modern yaşamın getirdiği postür problemleri için özel egzersiz ve manuel terapi uygulamaları.',
-      image: 'https://images.pexels.com/photos/7659589/pexels-photo-7659589.jpeg?auto=compress&cs=tinysrgb&w=800',
+      icon: <Bone className="w-12 h-12" />,
+      title: 'Bireysel / Grup Pilates Dersi',
+      description: 'Duruş, core stabilizasyonu ve fonksiyonel güç için bireysel veya grup pilates dersleri.',
+      image: pilates1,
       color: 'orange'
     }
   ];
