@@ -10,6 +10,7 @@ import Testimonials from './components/Testimonials/Testimonials';
 import Blog from './components/Blog/Blog';
 import Footer from './components/Footer/Footer';
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
+import './firebase';
 
 function App() {
   return (
