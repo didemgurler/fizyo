@@ -64,7 +64,7 @@ const Hero = () => {
                 Ücretsiz Randevu Al
               </button>
               <a
-                href="tel:05321234567"
+                href="tel:05305546198"
                 className="inline-flex items-center justify-center border-2 border-teal-600 text-teal-600 px-8 py-4 rounded-full hover:bg-teal-600 hover:text-white transition-all duration-300 font-medium text-lg text-center space-x-2"
               >
                 <Phone className="w-5 h-5" />

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide-react';
 
 const Footer = () => {
@@ -21,8 +20,8 @@ const Footer = () => {
             
             <div className="flex items-center space-x-3 p-4 bg-teal-600 rounded-lg">
               <Phone className="w-5 h-5 text-white" />
-              <a href="tel:05321234567" className="text-white font-semibold hover:text-teal-100 transition-colors">
-                0532 123 45 67
+              <a href="tel:05305546198" className="text-white font-semibold hover:text-teal-100 transition-colors">
+                0530 554 61 98
               </a>
             </div>
           </div>
@@ -86,9 +85,9 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-teal-400 mt-1" />
                 <div>
                   <p className="text-gray-300">
-                    Ankara Ticaret Merkezi A Blok<br />
-                    Kat: 6 No: 32<br />
-                    Çankaya/Ankara
+                    FizyoEco Pilates ve Sağlıklı Yaşam Merkezi<br />
+                    A.TANER KIŞLALI MAH. 2818.CAD İLKO SİT. No:36<br />
+                    06810 Çankaya/Ankara
                   </p>
                 </div>
               </div>
@@ -106,10 +105,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-teal-400" />
                 <a 
-                  href="tel:05321234567" 
+                  href="tel:05305546198" 
                   className="text-gray-300 hover:text-teal-400 transition-colors"
                 >
-                  0532 123 45 67
+                  0530 554 61 98
                 </a>
               </div>
             </div>

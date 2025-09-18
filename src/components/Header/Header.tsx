@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
 
 const Header = () => {
@@ -38,7 +38,7 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
-              <span>0532 123 45 67</span>
+              <span>0530 554 61 98</span>
             </div>
           </div>
         </div>

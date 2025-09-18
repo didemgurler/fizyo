@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 
 const WhatsAppButton = () => {
@@ -24,7 +24,7 @@ const WhatsAppButton = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "905321234567"; // Turkish phone number format for WhatsApp
+    const phoneNumber = "905305546198"; // Turkish phone number format for WhatsApp
     const message = encodeURIComponent(
       "Merhaba Aleyna Yaren, web sitenizden ulaşıyorum. Fizyoterapi hizmetleriniz hakkında bilgi almak istiyorum."
     );
@@ -83,7 +83,7 @@ const WhatsAppButton = () => {
       {/* Secondary Action Buttons */}
       <div className="absolute bottom-20 right-0 space-y-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
         <button
-          onClick={() => window.open('tel:05321234567', '_self')}
+          onClick={() => window.open('tel:05305546198', '_self')}
           className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105"
           aria-label="Telefon ara"
         >

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Calendar, Clock, Phone, User, FileText, CheckCircle, AlertCircle } from 'lucide-react';
 
 const AppointmentForm = () => {
@@ -146,7 +146,7 @@ const AppointmentForm = () => {
             </p>
             <div className="bg-teal-50 p-4 rounded-xl">
               <p className="text-teal-700 font-medium">
-                📞 Acil durumlar için: 0532 123 45 67
+                📞 Acil durumlar için: 0530 554 61 98
               </p>
             </div>
           </div>
@@ -209,7 +209,7 @@ const AppointmentForm = () => {
                   className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-teal-500 transition-colors ${
                     errors.phone ? 'border-red-500' : 'border-gray-300 focus:border-teal-500'
                   }`}
-                  placeholder="0532 123 45 67"
+                  placeholder="0530 554 61 98"
                 />
                 {errors.phone && (
                   <p className="mt-1 text-sm text-red-500 flex items-center">
@@ -402,11 +402,11 @@ const AppointmentForm = () => {
                   <p className="text-teal-100">Hemen arayın, randevunuzu alın</p>
                 </div>
                 <a
-                  href="tel:05321234567"
+                  href="tel:05305546198"
                   className="bg-white text-teal-600 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors flex items-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>0532 123 45 67</span>
+                  <span>0530 554 61 98</span>
                 </a>
               </div>
             </div>
