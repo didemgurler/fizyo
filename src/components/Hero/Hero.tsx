@@ -85,7 +85,7 @@ const Hero = () => {
                   <p className="text-teal-600 font-medium">Uzman Fizyoterapist</p>
                   <div className="mt-4 flex justify-center space-x-2">
                     {[...Array(5)].map((_, i) => (
-                      <div key={i} className="w-2 h-2 bg-teal-600 rounded-full"></div>
+                      <div key={i} className="w-2 h-2 bg-teal-500 rounded-full"></div>
                     ))}
                   </div>
                 </div>
