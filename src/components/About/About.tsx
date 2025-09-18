@@ -1,7 +1,63 @@
-import React from 'react';
+import { useState } from 'react';
 import { Play, Award, BookOpen, Users } from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const About = () => {
+  const [showFullBio, setShowFullBio] = useState(false);
+  const [showSeminars, setShowSeminars] = useState(false);
+  const [showBroadcasts, setShowBroadcasts] = useState(false);
+
+  const bioParagraphs: string[] = [
+    'Ben uzman fizyoterapist Aleyna Yaren Bayrak. Lisans eğitimimi Üsküdar Üniversitesi’nde onur derecesiyle tamamladıktan sonra sinir sisteminin terapideki önemini anlayıp seanslarıma bunu entegre edebilmek için Fizyoterapistler için olan Nörogelişimsel Yoga eğitimini aldım.',
+    'Ardından alanında uzman deneyimli kadroyla bir yıl kadar özel eğitim merkezinde özel gereksinimli (Down Sendromu, Asperger Sendromu, Serebral Palsi, William Sendromu, Otizm, vb.) bireyler ile çalıştım. Bu dönemde özellikle bağ kurmanın, birlikte keyif alabilmenin ve coregülasyonun çocuk veya yetişkin fark etmeksizin her bireyin hayatında ne kadar kıymetli olduğunu gördüğüm için Theratogs, Floortime 101 ve 201 eğitimlerini aldım.',
+    'Ardından Üsküdar Üniversitesi’nde yüksek lisans eğitmimi yüksek onur derecesiyle tamamlamış bulunmaktayım. Bu dönemde iki yıl özel bir klinikte danışan gördüm. Ocak 2024’ten beri Lifemed Tıp Merkezi’nde danışan kabul etmekteyim.',
+    'Okurken pek çok hastane, özel eğitim merkezi ve klinikte gözlem ve staj yapma şansım oldu; ayrıca iki yıl kadar Çocuk Fizyoterapistleri Derneği gençlik komisyonunda genel koordinatör olarak yer aldım. Ek olarak Beykoz Engelsiz Umutlar ve Travma ve İyileşme Derneklerinde gönüllü olarak pandemiden beri yer almaktayım.',
+    'Bu deneyimlerimde de fark ettiğim şey, aslında onlara sunduğumuz tedavilere ek olarak danışanların bizler ile bağ kurmaya çok fazla ihtiyaçları olduğuydu. Donanımlı ve tecrübeli bir fizyoterapist olarak işimi ve çalışmayı çok seviyorum.'
+  ];
+  const seminars: string[] = [
+    'Bahçeşehir Üniversitesi Fizyoterapi ve Rehabilitasyon Kulübü Sporcu Yaralanmalarında Fizyoterapistin Önemi Sempozyumu – 20 Aralık 2017',
+    'Duyu Bütünleme Derneği: Erken Dönemde Duyusal Gelişim, Çocuklarda Problem Davranışlara Yaklaşım ve Bebek ile Çocuklarda Beslenme Bozuklukları – 19 Mart 2018 (Seminer)',
+    'Üsküdar Üniversitesi: ÖÇB’de Propriyosepsiyon Tartışıyoruz – 13 Ekim 2018 (Sempozyum)',
+    'Üsküdar Üniversitesi: Patolojik Durumlarda İşlevsel Egzersizler – 22 Aralık 2018 (Sempozyum)',
+    'Gedik Üniversitesi: Skolyozda Klinik Tanı, Değerlendirme ve Schroth Yaklaşımı – 25 Şubat 2019 (Konferans)',
+    'Üsküdar Üniversitesi: Spor Travmatolojisi ve Rehabilitasyonu – 01-02 Mart 2019 (Kongre)',
+    'İstanbul Bilgi Üniversitesi: I. Uluslararası Fizyoterapide Ağrı – 08 Mart 2019 (Sempozyum)',
+    'Üsküdar Üniversitesi: II. Omurga Sağlığı – 06 Nisan 2019 (Sempozyum)',
+    'Üsküdar Üniversitesi: FTR Öğrenci Sempozyumu – 11 Mayıs 2019',
+    'FTR Seminerleri: Omurga Egzersizleri – 21 Temmuz 2019 (Seminer)',
+    'FTR Seminerleri: Uygulamalı İşlevsel Egzersiz – 4 Ağustos 2019 (Seminer)',
+    'Üsküdar Üniversitesi: Nörolojik Rehabilitasyon ve Yutma Bozuklukları – 24 Kasım 2019 (Sempozyum)',
+    'Etkin Kampüs İstanbul: Fizyoterapi ve Rehabilitasyon Zirvesi – 07 Mart 2020',
+    'Yeditepe Üniversitesi: Kadın ve Egzersiz Söyleşileri – 08 Mart 2020',
+    'Sanko Üniversitesi: X. Uluslararası Katılımlı Spor Fizyoterapistleri Kongresi – 06-09 Kasım 2019',
+    'FTR Seminerleri: Kas-Tendon ve Bağ Rehabilitasyonlarında Güncel Rehabilitasyon Yaklaşımları – 30 Nisan 2020',
+    'FTR Seminerleri: Kalça Rehabilitasyonunda Güncel Yaklaşımlar – 02 Mayıs 2020',
+    'FTR Seminerleri: Menisküs Rehabilitasyonunda Güncel Yaklaşımlar – 07 Mayıs 2020',
+    'FTR Seminerleri: Aşil Tendon Rehabilitasyonunda Güncel Yaklaşımlar – 14 Mayıs 2020',
+    'FTR Seminerleri: Skolyoz Rehabilitasyonunda Güncel Yaklaşımlar – 20 Mayıs 2020',
+    'FTR Seminerleri: Kronik Ağrılı Kas-İskelet Sistemi Sorunlarında Güncel Fizyoterapi Yaklaşımları – 21 Mayıs 2020',
+    'FTR Seminerleri: Ortopedik Rehabilitasyonda Fonksiyonel Egzersiz Prensipleri – 23 Mayıs 2020',
+    'Habitat Derneği: Çevrimiçi Güvenlik Eğitimi – 28 Ağustos 2020',
+    'FTR Seminerleri: Temporomandibular Eklem Rahatsızlıklarında Fizyoterapi Yaklaşımları – 27 Eylül 2020',
+    'Lokman Hekim Üniversitesi: I. Fizyoterapi ve Rehabilitasyonda Özel Konular – 12-13 Kasım 2020 (Kongre)',
+    'FTR Seminerleri: 5 Yaş Üstü Popülasyonda Alt Üriner Sistem Fonksiyon Bozukluklarında Değerlendirme ve Tedavi Yöntemleri – 07-09 Aralık 2020',
+    'FTR Seminerleri: Erişkinlerde Alt Üriner Sistem İşlev Bozuklukları ve Rehabilitasyonu – 11 Aralık 2020',
+    'Çocuk Fizyoterapistleri Derneği ve Gençlik Komisyonu: XII. Kariyer Günü – 13 Aralık 2020',
+    'Çocuk Fizyoterapistleri Derneği: Uluslararası Katılımlı VI. Pediatrik Rehabilitasyon Kongresi & II. Öğrenci Sempozyumu – 4-7 Haziran 2021',
+    'Nörogelişimsel Yoga: Uluslararası geçerli 200 saatlik Temel Yoga Eğitmenlik Eğitimi – 19 Haziran – 3 Ekim 2021',
+    'Bel Ağrısında Güncel Bütüncül Yaklaşımlar – 30-31 Ekim 2021 (Eğitim)',
+    'DIR Floortime 101 Başlangıç Düzeyi – 15-16 Kasım 2021 (Eğitim)',
+    'Doğru Adımlar Medikal & Uzm. Fzt. Buse Sert eşliğinde Theratogs – 12 Aralık 2021 (Eğitim)',
+    'Fzt. Osteopat ve Ultrasonografist Ümit Erkut eşliğinde Ultrason altında Dry Needling – 15-16 Ocak 2022 (Eğitim)',
+    'DIR Floortime 201 – 27 Şubat – 24 Nisan 2022 (Eğitim)'
+  ];
+
+  const broadcasts: string[] = [
+    'Çocuk Fizyoterapistleri Derneği Canlı Yayın Moderatörlüğü – Uzm. Fzt. Feride Bilir ile gerçekleşti.',
+    'Çocuk Fizyoterapistleri Derneği 2. Öğrenci Sempozyumu Sunuculuğu',
+    'Çocuk Fizyoterapistleri Derneği Canlı Yayın Moderatörlüğü – Uzm. Fzt. Görkem Dizdar ile gerçekleşti.',
+    'Üsküdar Üniversitesi Yüksek Lisans kapsamında Nörogelişimsel Yoga & Polivagal Teori Webinarı'
+  ];
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -38,22 +94,25 @@ const About = () => {
                 <span className="block text-teal-600">Aleyna Yaren</span>
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>
-                  Uzman Fizyoterapist Aleyna Yaren, Ankara doğumlu olup ilköğretim ve lise 
-                  eğitimini Ankara'da tamamladı. 2016 yılında Başkent Üniversitesi Sağlık 
-                  Bilimleri Fakültesi Fizik Tedavi ve Rehabilitasyon bölümünü burslu kazanarak 
-                  başladı ve 2021 yılında üniversiteyi dereceyle bitirerek 'fizyoterapist' 
-                  olarak mezun oldu.
-                </p>
-                <p>
-                  Manuel Terapi alanındaki Yüksek Lisans eğitimini Başkent Üniversitesi Sağlık 
-                  Bilimleri Fakültesi Fizyoterapi ve Rehabilitasyon bölümünde tamamlayarak 2023 
-                  yılında Uzman Fizyoterapist unvanını aldı.
-                </p>
-                <p>
-                  Uluslararası akademik çalışmaları önemli dergilerde yayınlanmıştır. Akademik 
-                  kariyeri ve bilimsel çalışmaları devam etmektedir.
-                </p>
+                <h3 className="text-2xl font-semibold text-gray-900">Merhaba</h3>
+                {(showFullBio ? bioParagraphs : bioParagraphs.slice(0, 2)).map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+                <button
+                  onClick={() => setShowFullBio((v) => !v)}
+                  className="inline-flex items-center text-teal-600 font-medium hover:text-teal-700 transition-colors"
+                  aria-expanded={showFullBio}
+                >
+                  {showFullBio ? (
+                    <>
+                      Daha az göster <ChevronUp className="w-4 h-4 ml-1" />
+                    </>
+                  ) : (
+                    <>
+                      Devamını oku <ChevronDown className="w-4 h-4 ml-1" />
+                    </>
+                  )}
+                </button>
               </div>
             </div>
 
@@ -88,29 +147,57 @@ const About = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-teal-600 to-blue-600 text-white p-6 rounded-2xl">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-xl font-bold mb-2">Ücretsiz Muayene</h3>
-                  <p className="text-teal-100">Hemen arayın, randevunuzu alın</p>
-                </div>
-                <a
-                  href="tel:05321234567"
-                  className="bg-white text-teal-600 px-6 py-3 rounded-xl font-bold hover:bg-gray-50 transition-colors"
-                >
-                  0532 123 45 67
-                </a>
-              </div>
+            {/* Seminars & Trainings */}
+            <div className="space-y-4 mt-6">
+              <h3 className="text-2xl font-bold text-gray-900">Katıldığım Eğitim, Kurs, Kongre ve Seminerler</h3>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                {(showSeminars ? seminars : seminars.slice(0, 6)).map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+              <button
+                onClick={() => setShowSeminars((v) => !v)}
+                className="inline-flex items-center text-teal-600 font-medium hover:text-teal-700 transition-colors"
+                aria-expanded={showSeminars}
+              >
+                {showSeminars ? (
+                  <>
+                    Daha az göster <ChevronUp className="w-4 h-4 ml-1" />
+                  </>
+                ) : (
+                  <>
+                    Tümünü göster ({seminars.length}) <ChevronDown className="w-4 h-4 ml-1" />
+                  </>
+                )}
+              </button>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-teal-600 text-white px-8 py-3 rounded-full hover:bg-teal-700 transition-colors font-medium">
-                Daha Fazla Bilgi
-              </button>
-              <button className="border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-full hover:bg-teal-600 hover:text-white transition-all duration-300 font-medium">
-                CV İndir
+            {/* Broadcasts & Webinars */}
+            <div className="space-y-4 mt-6">
+              <h3 className="text-2xl font-bold text-gray-900">Seminer, Sempozyum ve Canlı Yayınlar</h3>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                {(showBroadcasts ? broadcasts : broadcasts.slice(0, 2)).map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+              <button
+                onClick={() => setShowBroadcasts((v) => !v)}
+                className="inline-flex items-center text-teal-600 font-medium hover:text-teal-700 transition-colors"
+                aria-expanded={showBroadcasts}
+              >
+                {showBroadcasts ? (
+                  <>
+                    Daha az göster <ChevronUp className="w-4 h-4 ml-1" />
+                  </>
+                ) : (
+                  <>
+                    Tümünü göster ({broadcasts.length}) <ChevronDown className="w-4 h-4 ml-1" />
+                  </>
+                )}
               </button>
             </div>
+
+            
           </div>
         </div>
       </div>
