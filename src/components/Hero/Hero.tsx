@@ -1,5 +1,6 @@
 import React from 'react';
 import { Play, Award, Users, Calendar, Phone } from 'lucide-react';
+import profileImg from '../../assets/aleynayaren.jpg';
 
 const Hero = () => {
   const scrollToAppointment = () => {
@@ -76,7 +77,7 @@ const Hero = () => {
             <div className="relative bg-gradient-to-br from-teal-100 to-blue-100 rounded-3xl p-8 shadow-2xl">
               <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <img
-                  src="https://images.pexels.com/photos/5214413/pexels-photo-5214413.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src={profileImg}
                   alt="Aleyna Yaren - Fizyoterapist"
                   className="w-full h-96 object-cover rounded-xl"
                 />
