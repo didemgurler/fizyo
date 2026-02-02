@@ -9,28 +9,28 @@ const Services = () => {
     {
       icon: <Activity className="w-12 h-12" />,
       title: 'Manuel Terapi',
-      description: 'Eller ile uygulanan manuel terapi teknikleriyle ağrı, hareket kısıtlılığı ve fonksiyon kayıplarına hedefe yönelik çözümler.',
+      description: 'Elektroterapi ajanları, mobilizasyon teknikleri, kolaylaştırıcı araçlar, duyu topu, theregun ve manuel tekniklerle ağrı, hareket kısıtlılığı ve fonksiyon kayıplarını azaltmaya yönelik çalışırken mümkün olan tam bağımsızlık ve ağrısız bir yaşam kalitesi hedefleriz.',
       image: manualterapi1,
       color: 'teal'
     },
     {
       icon: <Activity className="w-12 h-12" />,
       title: 'Fizik Tedavi Seansları',
-      description: 'Bireye özel değerlendirme ile egzersiz, elektroterapi ve manuel teknikleri içeren kapsamlı fizik tedavi seansları.',
+      description: 'Bireye, yaşadığı ortopedik veya nörolojik gibi rahatsızlığına özgü gözlem ve planlama ile yardımcı ekipmanlar eşliğinde egzersiz, elektroterapi ve manuel teknikleri içeren kapsamlı fizik tedavi seansları gerçekleştiririz.',
       image: fiziktedavi1,
       color: 'blue'
     },
     {
       icon: <Heart className="w-12 h-12" />,
       title: 'Bireysel / Grup Yoga Dersi',
-      description: 'Nefes, mobilite ve farkındalık odaklı; bireysel veya küçük gruplarla güvenli yoga seansları.',
+      description: 'Nefes, postür, doğru yük aktarımı, esneklik ile mobilite ve beden farkındalığı odaklı; bireysel veya grupla yine kişiye ve gereksinimlerine özgü yoga seansları vermekteyiz.',
       image: yoga1,
       color: 'purple'
     },
     {
       icon: <Bone className="w-12 h-12" />,
       title: 'Bireysel / Grup Pilates Dersi',
-      description: 'Duruş, core stabilizasyonu ve fonksiyonel güç için bireysel veya grup pilates dersleri.',
+      description: 'Doğru postür ve duruş, core kuvveti ile stabilizasyonu, sağlıklı yaş alabilme, koordinasyon ile denge odaklı ve fonksiyonel olarak kas kuvvetini geliştiren bireysel, düet veya grup pilates dersleri vermekteyiz.',
       image: pilates1,
       color: 'orange'
     }

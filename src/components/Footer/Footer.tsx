@@ -66,7 +66,7 @@ const Footer = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Cumartesi:</span>
-                  <span className="text-teal-400 font-medium">09:00 - 20:00</span>
+                  <span className="text-red-400 font-medium">Kapalı</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Pazar:</span>

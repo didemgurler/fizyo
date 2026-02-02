@@ -12,8 +12,8 @@ const Statistics = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   const finalCounts = {
-    patients: 5000,
-    experience: 8,
+    patients: 100,
+    experience: 5,
     treatments: 15,
     satisfaction: 98
   };

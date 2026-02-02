@@ -15,12 +15,18 @@ const AppointmentForm = () => {
   const [errors, setErrors] = useState({});
 
   const complaints = [
-    'Bel Fıtığı',
-    'Boyun Fıtığı',
-    'Skolyoz',
-    'Boyun Düzleşmesi',
-    'Migren ve Baş Ağrısı',
-    'Postür Bozuklukları',
+    'Sırt, bel ve boyun ağrıları',
+    'Tendon problemleri',
+    'Yumuşak doku yaralanmaları',
+    'Ameliyat öncesi ve sonrası süreçler',
+    'Ortopedik yaralanmalar (omuz, diz, kalça vb.)',
+    'Tenisçi dirseği',
+    'Hamile pilatesi',
+    'Kırık sonrası geri dönüş',
+    'Kilo verme ve sıkılaşma',
+    'Denge koordinasyon ve beden farkındalığı problemi',
+    'Geriatrik birey takibi',
+    'Doğru duruş ve nefes problemleri',
     'Diğer'
   ];
 
@@ -43,11 +49,11 @@ const AppointmentForm = () => {
     }
     
     if (!formData.complaint) {
-      newErrors.complaint = 'Şikayet seçimi gerekli';
+      newErrors.complaint = 'Hizmet alanı seçimi gerekli';
     }
     
     if (formData.complaint === 'Diğer' && !formData.otherComplaint.trim()) {
-      newErrors.otherComplaint = 'Lütfen şikayetinizi belirtiniz';
+      newErrors.otherComplaint = 'Lütfen hizmet alanınızı belirtiniz';
     }
     
     if (!formData.appointmentDate) {
@@ -222,7 +228,7 @@ const AppointmentForm = () => {
               <div>
                 <label className="block text-gray-700 font-medium mb-2">
                   <FileText className="w-4 h-4 inline mr-2" />
-                  Hasta Şikayeti
+                  Hizmet Alanı
                 </label>
                 <select
                   name="complaint"
@@ -233,7 +239,7 @@ const AppointmentForm = () => {
                     errors.complaint ? 'border-red-500' : 'border-gray-300 focus:border-teal-500'
                   }`}
                 >
-                  <option value="">Şikayetinizi seçin</option>
+                  <option value="">Hizmet alanı seçin</option>
                   {complaints.map(complaint => (
                     <option key={complaint} value={complaint}>{complaint}</option>
                   ))}
@@ -350,16 +356,17 @@ const AppointmentForm = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Ankara Manuel Terapi
+                FizyoEco Pilates ve Sağlıklı Yaşam Merkezi
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Ankara'da bulunan fizyoterapi merkezimizde, uzman kadromuz ve modern 
-                fizyoterapi ekipmanlarımızla hizmetinizdeyiz. Fizyoterapi uzmanlarımız 
-                alanlarında deneyimli ve sürekli eğitim alan profesyonellerdir.
+                Ankara Çayyolu'nda bulunan fizyoterapi ve sağlıklı yaşam merkezimizde, uzman kadromuz ve modern
+                fizyoterapi yaklaşımlarıyla hizmetinizdeyiz. Uzmanlarımız fizyoterapist olup alanlarında deneyimli
+                ve sürekli eğitim alan profesyonellerdir.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Size en son ve en etkili tedavi yöntemlerini sunarak, hareket kabiliyetinizi, 
-                fonksiyonel gücünüzü ve yaşam kalitenizi artırmaya odaklanırız.
+                Sizlere bütüncül ve en etkili tedavi yöntemlerini sunarak, hareket kabiliyetinizi, kas kuvvetinizi,
+                elastikiyetinizi, denge koordinasyon ile beden farkındalığınızı, fonksiyonel gücünüzü ve yaşam
+                kalitenizi artırmaya odaklanırız.
               </p>
             </div>
 
@@ -367,7 +374,7 @@ const AppointmentForm = () => {
               <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="text-teal-600 font-bold text-lg mb-2 flex items-center">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  Profesyonel Hizmet
+                  Bütüncül ve Güncel Tedavi
                 </div>
                 <p className="text-gray-600 text-sm">Uzman kadro ile kaliteli tedavi</p>
               </div>
@@ -398,8 +405,7 @@ const AppointmentForm = () => {
             <div className="bg-gradient-to-r from-teal-600 to-blue-600 text-white p-6 rounded-2xl">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Acil Durum?</h3>
-                  <p className="text-teal-100">Hemen arayın, randevunuzu alın</p>
+                  <p className="text-xl font-bold">Siz de hemen arayın ve randevunuzu alın!</p>
                 </div>
                 <a
                   href="tel:05305546198"

@@ -26,14 +26,14 @@ const Hero = () => {
               </div>
               
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Ankara Manuel Terapi
-                <span className="block text-teal-600 mt-2">Aleyna Yaren</span>
+                FizyoEco Pilates ve Sağlıklı Yaşam Merkezi
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                Ankara'da bulunan fizyoterapi merkezimizde, uzman kadromuz ve modern 
-                fizyoterapi ekipmanlarımızla hizmetinizdeyiz. Hareket özgürlüğünüzü 
-                yeniden kazanmanız için yanınızdayız.
+                Ankara Çayyolu'nda bulunan fizyoterapi ve sağlıklı yaşam merkezimizde uzman kadromuz ve modern
+                fizyoterapi yaklaşımlarıyla hizmetinizdeyiz. Bireysel, grup ve düet pilates ile nörogelişimsel
+                yoga dersleri vermekteyiz. Günlük yaşam aktivitelerinde görülen ağrı ve kısıtlılığı azaltarak
+                hareket özgürlüğünüzü yeniden kazanmanız için yanınızdayız.
               </p>
             </div>
 
@@ -48,11 +48,11 @@ const Hero = () => {
               </div>
               <div className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow-sm">
                 <Calendar className="w-6 h-6 text-teal-600" />
-                <span className="text-gray-700 font-medium">Esnek Randevu</span>
+                <span className="text-gray-700 font-medium">Ücretsiz Deneme Dersi</span>
               </div>
               <div className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow-sm">
                 <Play className="w-6 h-6 text-teal-600" />
-                <span className="text-gray-700 font-medium">Modern Teknikler</span>
+                <span className="text-gray-700 font-medium">Güncel ve Bütüncül Yaklaşımlar</span>
               </div>
             </div>
 
@@ -82,8 +82,7 @@ const Hero = () => {
                   className="w-full h-96 object-cover rounded-xl"
                 />
                 <div className="mt-6 text-center">
-                  <h3 className="text-2xl font-bold text-gray-900">Aleyna Yaren</h3>
-                  <p className="text-teal-600 font-medium">Uzman Fizyoterapist</p>
+                  <h3 className="text-2xl font-bold text-gray-900">Uzm. Fzt. Aleyna Yaren Bayrak Uzun</h3>
                   <div className="mt-4 flex justify-center space-x-2">
                     {[...Array(5)].map((_, i) => (
                       <div key={i} className="w-2 h-2 bg-teal-500 rounded-full"></div>
@@ -95,7 +94,7 @@ const Hero = () => {
               {/* Floating Experience Badge */}
               <div className="absolute -top-4 -right-4 bg-teal-600 text-white px-6 py-4 rounded-2xl shadow-lg">
                 <div className="text-center">
-                  <div className="text-3xl font-bold">8+</div>
+                  <div className="text-3xl font-bold">5+</div>
                   <div className="text-sm">Yıllık Deneyim</div>
                 </div>
               </div>
@@ -103,7 +102,7 @@ const Hero = () => {
               {/* Floating Stats */}
               <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-lg">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-teal-600">5000+</div>
+                  <div className="text-2xl font-bold text-teal-600">Yüzlerce</div>
                   <div className="text-xs text-gray-600">Mutlu Hasta</div>
                 </div>
               </div>

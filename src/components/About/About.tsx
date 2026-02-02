@@ -8,11 +8,10 @@ const About = () => {
   const [showBroadcasts, setShowBroadcasts] = useState(false);
 
   const bioParagraphs: string[] = [
-    'Ben uzman fizyoterapist Aleyna Yaren Bayrak. Lisans eğitimimi Üsküdar Üniversitesi’nde onur derecesiyle tamamladıktan sonra sinir sisteminin terapideki önemini anlayıp seanslarıma bunu entegre edebilmek için Fizyoterapistler için olan Nörogelişimsel Yoga eğitimini aldım.',
-    'Ardından alanında uzman deneyimli kadroyla bir yıl kadar özel eğitim merkezinde özel gereksinimli (Down Sendromu, Asperger Sendromu, Serebral Palsi, William Sendromu, Otizm, vb.) bireyler ile çalıştım. Bu dönemde özellikle bağ kurmanın, birlikte keyif alabilmenin ve coregülasyonun çocuk veya yetişkin fark etmeksizin her bireyin hayatında ne kadar kıymetli olduğunu gördüğüm için Theratogs, Floortime 101 ve 201 eğitimlerini aldım.',
-    'Ardından Üsküdar Üniversitesi’nde yüksek lisans eğitmimi yüksek onur derecesiyle tamamlamış bulunmaktayım. Bu dönemde iki yıl özel bir klinikte danışan gördüm. Ocak 2024’ten beri Lifemed Tıp Merkezi’nde danışan kabul etmekteyim.',
-    'Okurken pek çok hastane, özel eğitim merkezi ve klinikte gözlem ve staj yapma şansım oldu; ayrıca iki yıl kadar Çocuk Fizyoterapistleri Derneği gençlik komisyonunda genel koordinatör olarak yer aldım. Ek olarak Beykoz Engelsiz Umutlar ve Travma ve İyileşme Derneklerinde gönüllü olarak pandemiden beri yer almaktayım.',
-    'Bu deneyimlerimde de fark ettiğim şey, aslında onlara sunduğumuz tedavilere ek olarak danışanların bizler ile bağ kurmaya çok fazla ihtiyaçları olduğuydu. Donanımlı ve tecrübeli bir fizyoterapist olarak işimi ve çalışmayı çok seviyorum.'
+    'Ben uzman fizyoterapist Aleyna Yaren Bayrak. Okuduğum dönemde pek çok hastane, klinik ve tıp merkezinde staj ve gözlem yapma imkanım oldu.',
+    `Lisans eğitimimi Üsküdar Üniversitesi'nde onur derecesiyle tamamladıktan sonra sinir sisteminin, bütüncül ve güncel yaklaşımların terapideki önemini anlayıp seanslarıma bunu entegre edebilmek için Fizyoterapistler için olan Nörogelişimsel Yoga, Klinik Pilates Level 1 ve 2, Floortime 101 ve 201, Theratogs, Kronik Bel Ağrısında Yaklaşım gibi çeşitli eğitimler aldım.`,
+    'Bu dönemde aldığım eğitimleri seanslarıma ve çalışma şeklime entegre ederken bir yandan da akademik olarak yine Kronik ağrı ve Nörogelişimsel Yoga üzerine yaptığım Yüksek Lisans eğitimimi yüksek onur derecesiyle tamamladım.',
+    `Beş yılı aşkındır yine özel klinik ve hastanelerde danışan görmekteydim. 2025 yılı itibariyle FizyoEco Pilates ve Sağlıklı Yaşam Merkezi'nde yer almakta ve danışan kabul etmekteyim.`
   ];
   const seminars: string[] = [
     'Bahçeşehir Üniversitesi Fizyoterapi ve Rehabilitasyon Kulübü Sporcu Yaralanmalarında Fizyoterapistin Önemi Sempozyumu – 20 Aralık 2017',
@@ -49,7 +48,9 @@ const About = () => {
     'DIR Floortime 101 Başlangıç Düzeyi – 15-16 Kasım 2021 (Eğitim)',
     'Doğru Adımlar Medikal & Uzm. Fzt. Buse Sert eşliğinde Theratogs – 12 Aralık 2021 (Eğitim)',
     'Fzt. Osteopat ve Ultrasonografist Ümit Erkut eşliğinde Ultrason altında Dry Needling – 15-16 Ocak 2022 (Eğitim)',
-    'DIR Floortime 201 – 27 Şubat – 24 Nisan 2022 (Eğitim)'
+    'DIR Floortime 201 – 27 Şubat – 24 Nisan 2022 (Eğitim)',
+    'Uluslararası Onaylı Australia Sports Institute Eğitmenlik Eğitimi Level 1 – Ekim 2024',
+    'Uluslararası Onaylı Australia Sports Institute Eğitmenlik Eğitimi Level 2 – Şubat 2025'
   ];
 
   const broadcasts: string[] = [
@@ -80,7 +81,7 @@ const About = () => {
               {/* Experience Badge */}
               <div className="absolute bottom-6 left-6 bg-teal-600 text-white p-6 rounded-2xl shadow-xl">
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">8+</div>
+                  <div className="text-4xl font-bold mb-2">5+</div>
                   <div className="text-sm font-medium">Yıllık Deneyim</div>
                 </div>
               </div>
@@ -121,28 +122,28 @@ const About = () => {
                 <Award className="w-8 h-8 text-teal-600" />
                 <div>
                   <div className="font-semibold text-gray-900">Uzman Fizyoterapist</div>
-                  <div className="text-sm text-gray-600">Başkent Üniversitesi</div>
+                  <div className="text-sm text-gray-600">Üsküdar Üniversitesi</div>
                 </div>
               </div>
               <div className="flex items-center space-x-4 p-4 bg-blue-50 rounded-xl">
                 <BookOpen className="w-8 h-8 text-blue-600" />
                 <div>
-                  <div className="font-semibold text-gray-900">Manuel Terapi</div>
+                  <div className="font-semibold text-gray-900">Kronik Bel Ağrısı, Yoga ve Kinezyofobi Üzerine</div>
                   <div className="text-sm text-gray-600">Yüksek Lisans</div>
                 </div>
               </div>
               <div className="flex items-center space-x-4 p-4 bg-green-50 rounded-xl">
                 <Users className="w-8 h-8 text-green-600" />
                 <div>
-                  <div className="font-semibold text-gray-900">5000+</div>
-                  <div className="text-sm text-gray-600">Tedavi edilen hasta</div>
+                  <div className="font-semibold text-gray-900">Hasta Memnuniyeti</div>
+                  <div className="text-sm text-gray-600">100+ Tedavi edilen hasta</div>
                 </div>
               </div>
               <div className="flex items-center space-x-4 p-4 bg-purple-50 rounded-xl">
                 <BookOpen className="w-8 h-8 text-purple-600" />
                 <div>
-                  <div className="font-semibold text-gray-900">Akademik</div>
-                  <div className="text-sm text-gray-600">Yayınlar</div>
+                  <div className="font-semibold text-gray-900">Akademik Çalışmalar</div>
+                  <div className="text-sm text-gray-600">Tez, Sözel Bildiriler, Canlı Yayınlar, Makale</div>
                 </div>
               </div>
             </div>
